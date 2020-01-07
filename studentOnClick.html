@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Students</title>
+  <script type="text/javascript">
+  var students=new Array('Mango','Apple','Grapes','Orange','Fig');
+  Array.prototype.displayItems=function()
+  {
+    for (var i =0; i <this.length; i++) 
+    { 
+        document.write(this[i] + "<br/>");
+     }
+  }
+  document.write("<b>Students array</b><br>");
+  students.displayItems();
+  document.write("<br><b>total students</b>"+students.length+"<br/>");
+  document.write("<br><b>sorted students</b><br/>");
+  students.sort();
+  students.displayItems();
+  document.write("<br><b>reversed students</b><br/>");
+  students.reverse();
+  students.displayItems();
+  document.write("<br><b>student list after removing last item</b><br/>");
+  students.pop();
+  students.displayItems();
+  document.write("<br><b>student list after push</b><br/>");
+  students.push("Watermelon");
+  students.displayItems();
+</script>
+</head>
+<body>
+
+
+</body>
+</head>
+</html>

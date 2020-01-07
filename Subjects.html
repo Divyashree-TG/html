@@ -1,0 +1,54 @@
+
+<!--<!DOCTYPE html>
+<html>
+<head>
+
+  <p>Subject names</p>
+  <select id="select">
+    
+  </select>
+  <button type="button" onclick="func()">Check options</button>
+  <script type="text/javascript">
+    function func()
+    {
+      var select=document.getElementById("select"),arr=["HTML","CSS","Java","Javascript","C","C++","SQL","PHP"];
+      for(var i=0;i<arr.length;i++)
+      {
+        var option=document.createElement("option"),
+        txt=document.createTextNode(arr[i]);
+        option.appendChild(txt);
+        option.setAttribute("value",arr[i]);
+        select.insertBefore(option,select.firstChild);
+      }
+    }
+    
+  </script>                                                                                                         </head>                                                                                                
+<body>
+  <p>Choose any one subject from the below</p>
+  <script type="text/javascript">
+function getCheckboxValues(form) {
+  var values = [];
+  var subject = form.subject;
+
+  for (var i=0, iLen=subject.length; i<iLen; i++) {
+    if (subject[i].checked) {
+      values.push(subject[i].value);
+    }
+  }
+  // Do something with values
+  alert("Language: " + values.join(', '));
+  return values;
+}
+
+</script>
+
+<form onsubmit="getCheckboxValues(this); return false;">
+  Html: <input type="radio" name="subject" value="html"><br>
+  C++: <input type="radio" name="subject" value="C++"><br>
+ PHP: <input type="radio" name="subject" value="javascript"><br>
+ SQL: <input type="radio" name="subject" value="javascript"><br>
+  <input type="reset"> <input type="submit">
+</form>
+</body>
+
+-->

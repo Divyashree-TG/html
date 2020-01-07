@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html>
+<head>
+	<title>get value onclick program</title>
+	
+</head>
+<body>
+
+	<!--
+ <p id="p1">this is palce holder1</p>
+  <p id="p2" name="pp2">this is palce holder2</p>
+ 
+ <input type="Button" name="b1" id="bb1" onclick="AssignTheValue()" value="Click me">
+ <script type="text/javascript">
+  function AssignTheValue(){
+  	document.getElementById("p1").innerHTML="THIS IS UPASANA CALLING";
+  	document.getElementById("p2").innerHTML="THIS IS DIVYA CALLING";
+  }
+
+	</script>
+-->
+
+
+<!--
+			Enter First Number : <br>
+            <input type="text" id="Text1" name="TextBox1">
+            <br>
+            Enter Second Number : <br>
+            <input type="text" id="Text2" name="TextBox2">
+            <br> <br> 
+            <input type="button" name="clickbtn" value="Display Result" onclick="add_number()">
+            <br>
+        	Result : <br>
+            <input type="text" id="txtresult" name="TextBox3">
+
+        <script type="text/javascript">
+            function add_number(){
+            var first_number = parseInt(document.getElementById("Text1").value);
+            var second_number = parseInt(document.getElementById("Text2").value);
+            var result = first_number + second_number;
+
+            document.getElementById("txtresult").value = result;
+            
+            }
+        </script>
+      -->
+
+
+       Fruits : <br><br>
+       <p id="p1">result</p>
+       <button type="button" onclick="display_fruits()"> </button> 
+        <script type="text/javascript">
+ 			
+ 			function display_fruits() {
+ 				var fruits=['Mango','Apple','Grapes','Orange','Fig'];
+ 				var result="";
+ 				for (var i =0; i <fruits.length; i++) {
+ 				result+=fruits[i]+"<br>";
+ 				document.getElementById("p1").innerHTML=result;
+ 			}
+ 			}
+
+           </script>  
+
+
+
+</body>
+</html>

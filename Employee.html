@@ -1,0 +1,37 @@
+<DOCTYPE html>
+<html>
+<head>
+    <title>Employee information </title>
+    <script type="text/javascript">
+      var employee=new Object();
+      employee.fname="John";
+      employee.lname="smith";
+      employee.fp =28750;
+      employee.vp =500;
+      employee.bonus =1500;
+
+employee.monthlySalary=function()
+{
+  return(employee.fp+employee.vp)
+}
+employee.annualSalary=function()
+{
+  return((employee.fp+employee.vp)*12)+employee.bonus;
+}
+employee.display = function()
+    {
+      document.write("Employee Id: " + employee.id + "<br />" );
+      document.write("Employee Name: " + employee.fname + "<br />");
+      var ms = employee.monthlySalary();
+      document.write("Monthly Salary: " + ms + "<br />");
+      var ys = employee.annualSalary();
+      document.write(" Yearly Salary: " + ys);
+    };
+    employee.display();
+    
+</script>
+</head>
+<body>
+
+</body>
+</html>

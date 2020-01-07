@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<!--
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Array Radio JS</title>
+</head>
+<body>
+  <div id="wrapper"></div>
+  <input type="button" onclick="radiobutton()" value="Click"></input>
+  <script type="text/javascript">
+    function radiobutton() {
+      var myArray = ["HTML", "JAVA", "C", "C++","JAVA SCRIPT","SQL","PHP"];
+      var wrapper = document.getElementById('wrapper');
+        var elementsToInsert = [];
+      for(var i = 0; i < myArray.length; i++) {
+        var radio = document.createElement('input');
+        var label = document.createElement('label');
+        radio.type = 'radio';
+        radio.name = "HTML";
+        radio.value = myArray[i];
+
+        label.setAttribute("for", myArray[i]);
+        label.innerHTML = myArray[i];
+
+        elementsToInsert.push({ label: label, radio: radio });
+      }
+      while(elementsToInsert.length !== 0) {
+        var randomIndex = Math.floor(Math.random() * elementsToInsert.length);
+
+       
+        var toInsert = elementsToInsert.splice(randomIndex, 1)[0];
+
+        wrapper.appendChild(toInsert.label);
+        wrapper.appendChild(toInsert.radio);
+      }
+    }
+  </script>
+</body>
+</html>
+-->
+
+<html>
+<head>
+                                                                                                  
+<body>
+  <p>Choose any one subject from the below</p>
+  <script type="text/javascript">
+function getCheckboxValues(form) {
+  var values = [];
+  var subject = form.subject;
+
+  for (var i=0, iLen=subject.length; i<iLen; i++) {
+    if (subject[i].checked) {
+      values.push(subject[i].value);
+    }
+  }
+  // Do something with values
+  alert("Language: " + values.join(', '));
+  return values;
+}
+
+</script>
+
+<form onsubmit="getCheckboxValues(this); return false;">
+  Html: <input type="radio" name="subject" value="html"><br>
+  C++: <input type="radio" name="subject" value="C++"><br>
+ PHP: <input type="radio" name="subject" value="php"><br>
+ SQL: <input type="radio" name="subject" value="sql"><br>
+  <input type="reset"> <input type="submit">
+</form>
+</body>
+<!--
+  <!DOCTYPE html>
+<html>
+<head>
+  <title>Check number</title>
+</head>
+<body>
+  <div id="a"></div>
+  <form>
+    <label>Roll_No:</label>
+    <input type="text" id="rollno"/>
+    <p id="p1"></p>
+    <input type="button" onclick="check()" value="Check" id="b1"></input><br><br>
+
+    <label>Enter Password:</label>
+    <input type="password" id="pwd"/>
+    <p id="p2"></p><br><br>
+    <label>Confirm Password:</label>
+    <input type="password" id="cpwd"/>
+    <p id="p3">plz Re-enter password</p><br><br>
+    <br>
+
+    <input type="button" onclick="password()" value="OK" id="b2"></input>
+  </form>
+  <script type="text/javascript">
+    function password()
+     {
+        var p=document.getElementById("pwd").value;
+        var cp=document.getElementById("cpwd").value;
+        var l1=p.length;
+        var l2=cp.length;
+        if(l1<8)
+        {
+          alert("<span style='color: red'>Invalid password..Your password must be of minimum of 8 characters..!</span>");
+        }
+        if(p && cp=="")
+        {
+          document.getElementById("p3").innerHTML="<span style='color: red'>Please confirm password....!</span>";
+        }
+        if(!(l1==l2 && p===cp))
+        {
+          alert("Password does not match...");
+        }
+        else
+        {
+          document.getElementById("p3").innerHTML="<span style='color: green'>Valid password....!</span>";
+        }
+
+        
+
+
+      
+      }
+    function check()
+    {
+      var n=document.getElementById("rollno").value;
+      if(isNaN(n))
+      {
+        document.getElementById("p1").innerHTML="<span style='color: red'>Your roll_no must be a number only....!</span>";
+      }
+      else
+      {
+        document.getElementById("p1").innerHTML="<span style='color: green'>Your roll_no is valid....!</span>";
+      }
+
+    }
+    
+  </script>
+</body>
+</html>
+
+-->

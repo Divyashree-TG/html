@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>	</title>
+
+	<script>
+  </script>
+</head>
+<body>
+<h2>create employee json</h2>
+<p id="demo"></p>
+<p id="p1"></p>
+<script>
+  var obj={fname:"Divya",lname:"Shree",age:22,salary:28000};
+  var myJSON=JSON.stringify(obj);
+  document.getElementById("demo").innerHTML=myJSON;
+</script>
+<script type="text/javascript">
+  var myJSON='{"fname":"Divya","lname":"Shree","age":22,"salary":28000}';
+   var myObj=JSON.parse(myJSON);
+  document.getElementById("p1").innerHTML=myObj.fname;
+</script>
+
+</body>
+</html>
